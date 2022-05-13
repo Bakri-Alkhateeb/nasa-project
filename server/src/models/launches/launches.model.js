@@ -109,7 +109,7 @@ async function addNewLaunch(launch) {
   try {
     // Set Properties Like This
     launch.flightNumber = (await getLatestFlightNumber()) + 1;
-    launch.customers = ["ZTM", "NASA"];
+    launch.customers = ["Bakri", "NASA"];
     launch.upcoming = true;
     launch.success = true;
 

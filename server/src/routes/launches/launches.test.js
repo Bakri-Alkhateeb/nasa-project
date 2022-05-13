@@ -4,10 +4,13 @@ const {
   connectToMongoDB,
   disconnectToMongoDB,
 } = require("../../services/mongo");
+const { loadPlanetsData } = require("../../models/planets/planets.model");
 
 describe("launches API", () => {
   beforeAll(async () => {
     await connectToMongoDB();
+
+    await loadPlanetsData();
   });
 
   afterAll(async () => {
